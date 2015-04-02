@@ -4,6 +4,7 @@ Install Takipi (https://www.takipi.com) on AWS Elastic Beanstalk
 Requirements
 ============
 Java ( >=1.6 )
+
 AWS Elastic Beanstalk environment
 
 Attributes
