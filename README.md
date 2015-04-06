@@ -17,6 +17,9 @@ commands:
     command: "/opt/takipi/etc/takipi-setup-package YOUR_SECRET_KEY"
 ```
 
+After the changes use maven to repackage the war file by the command :
+``` mvn package ```
+
 Usage
 =====
 Takipi website: http://www.takipi.com
