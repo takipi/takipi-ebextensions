@@ -3,26 +3,34 @@ Install Takipi (https://www.takipi.com) on AWS Elastic Beanstalk
 
 Requirements
 ============
-Java ( >=1.6 )
+Modern Java deployment on Amazon Linux.
 
-AWS Elastic Beanstalk environment
+Installation
+============
+Installing Takipi on AWS Elastic Beanstalk requires a eb-extensions file. This file should be named 00takipi.config.
 
-Attributes
-==========
-Make sure you include your Takipi secret key as custom the /src/main/ebextainsions/00takipi.config file :
+`WebApp`  is a sample maven web project that shows how to pack the config file with your application before deploying it to beanstalk.
+
+
+Make sure to put your Takipi installation secret key in `/src/main/ebextensions/00takipi.config` file
 
 ```
 commands:
   takipi_setup:
-    command: "/opt/takipi/etc/takipi-setup-package YOUR_SECRET_KEY"
+    command: "/opt/takipi/etc/takipi-setup-package <YOUR_SECRET_KEY>"
 ```
 
-After the changes use maven to repackage the war file by the command :
+Use maven or other to pack your your application (war file):
 
 ``` mvn package ```
+
+You can view the sample `WebApp/target/WebApp.war`
 
 Usage
 =====
 Takipi website: http://www.takipi.com
 
-To connect Takipi to your Java process add the following JVM argument -agentlib:TakipiAgent before -classpath/-jar.
+Need help?
+=====
+
+Contact us at: [support@takipi.com](mailto:support@takipi.com) or read more at https://docs.takipi.com
