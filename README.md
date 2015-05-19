@@ -11,9 +11,7 @@ Installing Takipi on AWS Elastic Beanstalk requires a eb-extensions file. This f
 
 `WebApp`  is a sample maven web project that shows how to pack the config file with your application before deploying it to beanstalk.
 
-
-Make sure to put your Takipi installation secret key in `/src/main/ebextensions/00takipi.config` file , 
-
+Config your eb-extensions file (`/src/main/ebextensions/00takipi.config`) like:
 ```
 packages:
   rpm:
@@ -22,6 +20,8 @@ commands:
   takipi_setup:
     command: "/opt/takipi/etc/takipi-setup-package <YOUR_SECRET_KEY>"
 ```
+Make sure to put your Takipi installation secret key instead  <YOUR_SECRET_KEY>. 
+
 
 Use maven or other to pack your your application (war file):
 
