@@ -20,7 +20,7 @@ packages:
     takipi: https://app.takipi.com/app/download?t=rpm
 commands:
   takipi_setup:
-    command: "/opt/takipi/etc/takipi-setup-package **<YOUR_SECRET_KEY>**"
+    command: "/opt/takipi/etc/takipi-setup-package <YOUR_SECRET_KEY>"
 ```
 
 Use maven or other to pack your your application (war file):
