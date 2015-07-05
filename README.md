@@ -19,6 +19,11 @@ packages:
 commands:
   takipi_setup:
     command: "/opt/takipi/etc/takipi-setup-package <YOUR_SECRET_KEY>"
+  
+  option_settings:
+  - namespace:  aws:elasticbeanstalk:container:tomcat:jvmoptions
+    option_name:  JVM Options
+    value:  -agentlib:TakipiAgent
 ```
 Make sure to put your Takipi installation secret key instead  <YOUR_SECRET_KEY>. 
 
